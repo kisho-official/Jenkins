@@ -1,11 +1,4 @@
 #!/usr/bin/env groovy
-pipeline {
-    agent { docker 'ruby' }
-    stages {
-        stage('build') {
-            steps {
-                sh 'ruby --version'
-            }
-        }
-    }
+node{
+  echo 'Hello world'
 }
