@@ -1,0 +1,48 @@
+
+<%= simple_form_for @user, html: {class: "form-vertical"}  do |f| %>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-addon">Name</div>
+			<%= f.input :name, label: false, input_html: {class: "form-control"} %>
+		</div>
+	</div>
+	<div class="form-group">
+		
+    		<%= f.input :surname, input_html: {class: "form-control"}%>
+    	
+    </div>
+    <div class="form-group">
+    	
+    		<%= f.input :dob, as: :string, input_html: {class: "datepick form-control"} %>
+    	
+    </div>
+    <div class="form-group">
+    	
+    		<%= f.collection_radio_buttons :gender, [['male', 'Male'], ['female', 'Female']], :first, :last %>
+    	
+    </div>
+
+   <div class="form-group">
+    	
+    		<%= f.input :manager_id, input_html: {class: "form-control"} %>
+    	
+    </div>
+    <div class="form-group">
+    	
+    		<%= f.input :highest_qualification, input_html: {class: "form-control"} %>
+    	
+    </div>
+    <div class="form-group">
+    	
+    		<%= f.input :mobile, inline_label: 'Yes, remember me', input_html: {class: "form-control"} %>
+    	
+    </div>
+    <div class="form-group">
+    
+    		<%= f.input :email, input_html: {class: "form-control"} %>
+    	
+    </div>
+    <%= f.submit%>
+    
+<% end %>
+
