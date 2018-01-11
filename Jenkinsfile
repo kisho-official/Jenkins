@@ -1,4 +1,4 @@
 #!/usr/bin/env groovy
 node{
-  bat 'ruby -v'
+  sh 'ruby -v'
 }
